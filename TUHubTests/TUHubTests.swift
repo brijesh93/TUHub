@@ -77,7 +77,7 @@ class TUHubTests: XCTestCase {
             }
         }
         
-        waitForExpectations(timeout: 100) { (error) in
+        waitForExpectations(timeout: 10) { (error) in
             if let error = error {
                 log.error(error)
             }
@@ -115,34 +115,35 @@ class TUHubTests: XCTestCase {
         }
         
     }
-    
-    func testCourseCalendarView() {
-        let asyncExpectation = expectation(description: "testCourseCalendarView")
-        var kCourses: [Term]?
-        var kUser: User?
-        
-        User.signInSilently { (user, error) in
-            if let user = user {
-                kUser = user
-                user.retrieveCourseCalendarView({ (courses, error) in
-                    if let courses = courses {
-                        kCourses = courses
-                    }
-                    asyncExpectation.fulfill()
-                })
-            }
-        }
-        
-        waitForExpectations(timeout: 10) { (error) in
-            if let error = error {
-                log.error(error)
-            }
-            
-            XCTAssertNotNil(kUser, "Failed to retrieve user.\nSign in if you have not already done so.")
-            XCTAssertNotNil(kCourses, "Failed to retrieve course calendar view for user.")
-        }
-        
-    }
+
+    // CourseCalendarView only provides data about the current week, which we are unlikely to need because we will be providing a full calendar
+//    func testCourseCalendarView() {
+//        let asyncExpectation = expectation(description: "testCourseCalendarView")
+//        var kCourses: [Term]?
+//        var kUser: User?
+//        
+//        User.signInSilently { (user, error) in
+//            if let user = user {
+//                kUser = user
+//                user.retrieveCourseCalendarView({ (courses, error) in
+//                    if let courses = courses {
+//                        kCourses = courses
+//                    }
+//                    asyncExpectation.fulfill()
+//                })
+//            }
+//        }
+//        
+//        waitForExpectations(timeout: 10) { (error) in
+//            if let error = error {
+//                log.error(error)
+//            }
+//            
+//            XCTAssertNotNil(kUser, "Failed to retrieve user.\nSign in if you have not already done so.")
+//            XCTAssertNotNil(kCourses, "Failed to retrieve course calendar view for user.")
+//        }
+//        
+//    }
     
     // Removed for now until I can figure out what arguments the API wants for this endpoint
 //    func testCourseRoster() {

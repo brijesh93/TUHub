@@ -36,6 +36,8 @@ struct Term {
         
         for subJSON in sections {
             // Check whether the JSON contains grade or course info
+            
+            // For grades
             if subJSON["grades"] != JSON.null {
                 if let grade = Grade(json: subJSON) {
                     if grades == nil {
@@ -43,7 +45,18 @@ struct Term {
                     }
                     grades!.append(grade)
                 }
-            } else if subJSON["meetingPatterns"] != JSON.null {
+            }
+            // For course overview
+            else if subJSON["meetingPatterns"] != JSON.null {
+                if let course = Course(json: subJSON) {
+                    if courses == nil {
+                        courses = [Course]()
+                    }
+                    courses!.append(course)
+                }
+            }
+            // For course full view
+            else if subJSON["sectionId"] != JSON.null {
                 if let course = Course(json: subJSON) {
                     if courses == nil {
                         courses = [Course]()

@@ -169,34 +169,46 @@ extension User {
                 debugPrint(json)
                 for (_, subJSON) in json["terms"] {
                     if let term = Term(json: subJSON) {
-                        
+                        if courses == nil {
+                            courses = [Term]()
+                        }
+                        courses!.append(term)
                     }
                 }
-                
             }
+            responseHandler?(courses, error)
         }
     }
     func retrieveCourseFullView(_ responseHandler: CoursesResponseHandler?) {
         NetworkManager.request(fromEndpoint: .courseFullView, withTUID: tuID, authenticateWith: credential) { (json, error) in
-            var courses: [Course]?
+            var courses: [Term]?
             
             if let json = json {
                 debugPrint(json)
+                for (_, subJSON) in json["terms"] {
+                    if let term = Term(json: subJSON) {
+                        if courses == nil {
+                            courses = [Term]()
+                        }
+                        courses!.append(term)
+                    }
+                }
             }
-            
+            responseHandler?(courses, error)
         }
     }
     
-    func retrieveCourseCalendarView(_ responseHandler: CoursesResponseHandler?) {
-        NetworkManager.request(fromEndpoint: .courseCalendarView, withTUID: tuID, authenticateWith: credential) { (json, error) in
-            var courses: [Course]?
-            
-            if let json = json {
-                debugPrint(json)
-            }
-            
-        }
-    }
+    // CourseCalendarView only provides data about the current week, which we are unlikely to need because we will be providing a full calendar
+//    func retrieveCourseCalendarView(_ responseHandler: CoursesResponseHandler?) {
+//        NetworkManager.request(fromEndpoint: .courseCalendarView, withTUID: tuID, authenticateWith: credential) { (json, error) in
+//            var courses: [Course]?
+//            
+//            if let json = json {
+//                debugPrint(json)
+//            }
+//            
+//        }
+//    }
     
     // Removed for now until I can figure out what arguments the API wants for this endpoint
 //    func retrieveCourseRoster(_ responseHandler: CoursesResponseHandler?) {

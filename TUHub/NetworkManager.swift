@@ -15,51 +15,44 @@ class NetworkManager: NSObject {
         case grades = "https://prd-mobile.temple.edu/banner-mobileserver/api/2.0/grades/"
         case courseOverview = "https://prd-mobile.temple.edu/banner-mobileserver/api/2.0/courses/overview/"
         case courseFullView = "https://prd-mobile.temple.edu/banner-mobileserver/api/2.0/courses/fullview/"
-        case courseCalendarView = "https://prd-mobile.temple.edu/banner-mobileserver/api/2.0/courses/calendarview/"
+        // case courseCalendarView = "https://prd-mobile.temple.edu/banner-mobileserver/api/2.0/courses/calendarview/"
+        // This endpoint only gives this current week's schedule, which we are unlikely to use.
         // case courseRoster = "https://prd-mobile.temple.edu/banner-mobileserver/api/2.0/courses/roster/"
-        // Nevermind, this endpoint doesn't work? It always gives invalid arguments error. Will investigate further.
+        // This endpoint doesn't work? It always gives invalid arguments error. Will investigate further.
     }
     
     enum Endpoint: String {
         case getUserInfo = "https://prd-mobile.temple.edu/banner-mobileserver/api/2.0/security/getUserInfo"
-//        case 
+        
     }
     
     typealias ResponseHandler = (JSON?, Error?) -> Void
     
-//    static private(set) var shared: NetworkManager?
-//    
-//    private let username: String
-//    private let password: String
-//    
-//    private init(username: String, password: String) {
-//        self.username = username
-//        self.password = password
-//    }
-//    
-//    static func setSharedInstance(username: String, password: String) {
-//        shared = NetworkManager(username: username, password: password)
-//    }
-//    
-//    static func destroySharedInstance() {
-//        NetworkManager.shared = nil
-//    }
-    
-    static func request(fromEndpoint endpoint: Endpoint, _ responseHandler: ResponseHandler?) {
+    static func request(fromEndpoint endpoint: Endpoint,
+                        _ responseHandler: ResponseHandler?) {
+        
         NetworkManager.request(url: endpoint.rawValue, withTUID: nil, authenticateWith: nil, responseHandler)
     }
     
-    static func request(fromEndpoint endpoint: Endpoint, authenticateWith credential: Credential, _ responseHandler: ResponseHandler?) {
+    static func request(fromEndpoint endpoint: Endpoint,
+                        authenticateWith credential: Credential,
+                        _ responseHandler: ResponseHandler?) {
+        
         NetworkManager.request(url: endpoint.rawValue, withTUID: nil, authenticateWith: credential, responseHandler)
     }
     
-    static func request(fromEndpoint endpoint: UserEndpoint, withTUID tuID: String, authenticateWith credential: Credential, _ responseHandler: ResponseHandler?) {
+    static func request(fromEndpoint endpoint: UserEndpoint,
+                        withTUID tuID: String,
+                        authenticateWith credential: Credential,
+                        _ responseHandler: ResponseHandler?) {
+        
         NetworkManager.request(url: endpoint.rawValue, withTUID: tuID, authenticateWith: nil, responseHandler)
     }
     
-    private static func request(url: String, withTUID tuID: String?, authenticateWith credential: Credential?, _ responseHandler: ResponseHandler?) {
-        
-        
+    private static func request(url: String,
+                                withTUID tuID: String?,
+                                authenticateWith credential: Credential?,
+                                _ responseHandler: ResponseHandler?) {
         
         // Generate HTTP Basic Auth header
         var headers: HTTPHeaders?

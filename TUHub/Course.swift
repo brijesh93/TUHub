@@ -11,39 +11,40 @@ import SwiftyJSON
 struct Course {
 
     let name: String // Course code
-    let description: String // Longest
+    let description: String? // Longest name
     let title: String // Shorter than description
     let sectionNumber: String
     let credits: UInt8?
     private(set) var meetings: [CourseMeeting]? // Presumably, an online class has no meetings?
-    private(set) lazy var instructors = [Instructor]()
+    private(set) var instructors: [Instructor]? // Not provided in fullview or calendar view
     let levels: [String]?
     
     
     init?(json: JSON) {
         guard let name = json["courseName"].string,
-            let description = json["courseDescription"].string,
             let title = json["sectionTitle"].string,
-            let sectionNumber = json["courseSectionNumber"].string,
-            let credits = json["credits"].uInt8,
-            let levels = json["academicLevels"].arrayObject as? [String],
-            let instructors = json["instructors"].array
+            let sectionNumber = json["courseSectionNumber"].string
             else {
                 log.error("Invalid JSON while initializing Course")
                 return nil
         }
         
         self.name = name
-        self.description = description
+        self.description = json["courseDescription"].string
         self.title = title
         self.sectionNumber = sectionNumber
-        self.credits = credits
-        self.levels = levels
+        self.credits = json["credits"].uInt8
+        self.levels = json["academicLevels"].arrayObject as? [String]
         
-        for subJSON in instructors {
-            debugPrint(subJSON)
-            if let instructor = Instructor(json: subJSON) {
-                self.instructors.append(instructor)
+        if let instructorsJSON = json["instructors"].array {
+            for subJSON in instructorsJSON {
+                debugPrint(subJSON)
+                if let instructor = Instructor(json: subJSON) {
+                    if instructors == nil {
+                        instructors = [Instructor]()
+                    }
+                    instructors!.append(instructor)
+                }
             }
         }
         
