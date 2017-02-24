@@ -7,14 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37FD610AAB987235177A1533 /* Pods_TUHubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C369AC415ABB8738F6351247 /* Pods_TUHubTests.framework */; };
 		7D043A501E5BF7EF0003A853 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D043A4F1E5BF7EF0003A853 /* AppDelegate.swift */; };
-		7D043A521E5BF7EF0003A853 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D043A511E5BF7EF0003A853 /* FirstViewController.swift */; };
-		7D043A541E5BF7EF0003A853 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D043A531E5BF7EF0003A853 /* SecondViewController.swift */; };
 		7D043A571E5BF7EF0003A853 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D043A551E5BF7EF0003A853 /* Main.storyboard */; };
 		7D043A591E5BF7EF0003A853 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D043A581E5BF7EF0003A853 /* Assets.xcassets */; };
 		7D043A5C1E5BF7EF0003A853 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D043A5A1E5BF7EF0003A853 /* LaunchScreen.storyboard */; };
 		7D043A671E5BF7EF0003A853 /* TUHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D043A661E5BF7EF0003A853 /* TUHubTests.swift */; };
 		7D043A721E5BF7EF0003A853 /* TUHubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D043A711E5BF7EF0003A853 /* TUHubUITests.swift */; };
+		7D043A841E5BF8880003A853 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D043A7F1E5BF8880003A853 /* SignInViewController.swift */; };
+		7D043A851E5BF8880003A853 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D043A801E5BF8880003A853 /* User.swift */; };
+		7D043A861E5BF8880003A853 /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D043A811E5BF8880003A853 /* Grade.swift */; };
+		7D043A871E5BF8880003A853 /* Term.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D043A821E5BF8880003A853 /* Term.swift */; };
+		7D043A881E5BF8880003A853 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D043A831E5BF8880003A853 /* NetworkManager.swift */; };
+		7D043A8F1E5F73060003A853 /* JSON+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D043A8E1E5F73060003A853 /* JSON+Date.swift */; };
+		7D043A911E5F871E0003A853 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D043A901E5F871E0003A853 /* Course.swift */; };
+		7D043A931E5FA9800003A853 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D043A921E5FA9800003A853 /* Credential.swift */; };
+		941AB645B5C3E0E6A95DACF2 /* Pods_TUHubUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BCC307919AD5A4C9159AAE0 /* Pods_TUHubUITests.framework */; };
+		A1D62E3F439C1C254F6FC729 /* Pods_TUHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9048A865C973948E6821D8E5 /* Pods_TUHub.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3361CEFB73AA8E72E9E0B46D /* Pods-TUHubTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TUHubTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TUHubTests/Pods-TUHubTests.release.xcconfig"; sourceTree = "<group>"; };
+		3BBBD4D5AE6A3197E62F3182 /* Pods-TUHubUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TUHubUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TUHubUITests/Pods-TUHubUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6DDB0DADD33842008B60C6C1 /* Pods-TUHubUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TUHubUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TUHubUITests/Pods-TUHubUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7D043A4C1E5BF7EF0003A853 /* TUHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TUHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D043A4F1E5BF7EF0003A853 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7D043A511E5BF7EF0003A853 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		7D043A531E5BF7EF0003A853 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		7D043A561E5BF7EF0003A853 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7D043A581E5BF7EF0003A853 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D043A5B1E5BF7EF0003A853 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +59,20 @@
 		7D043A6D1E5BF7EF0003A853 /* TUHubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TUHubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D043A711E5BF7EF0003A853 /* TUHubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUHubUITests.swift; sourceTree = "<group>"; };
 		7D043A731E5BF7EF0003A853 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D043A7F1E5BF8880003A853 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		7D043A801E5BF8880003A853 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7D043A811E5BF8880003A853 /* Grade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
+		7D043A821E5BF8880003A853 /* Term.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Term.swift; sourceTree = "<group>"; };
+		7D043A831E5BF8880003A853 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		7D043A8E1E5F73060003A853 /* JSON+Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSON+Date.swift"; sourceTree = "<group>"; };
+		7D043A901E5F871E0003A853 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		7D043A921E5FA9800003A853 /* Credential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
+		806A184B82A477E750A74ED6 /* Pods-TUHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TUHub.release.xcconfig"; path = "Pods/Target Support Files/Pods-TUHub/Pods-TUHub.release.xcconfig"; sourceTree = "<group>"; };
+		9048A865C973948E6821D8E5 /* Pods_TUHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TUHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BCC307919AD5A4C9159AAE0 /* Pods_TUHubUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TUHubUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6B83BCB5F7B95784508A4F9 /* Pods-TUHubTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TUHubTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TUHubTests/Pods-TUHubTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C369AC415ABB8738F6351247 /* Pods_TUHubTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TUHubTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCFC4770C367EB96D432EF86 /* Pods-TUHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TUHub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TUHub/Pods-TUHub.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1D62E3F439C1C254F6FC729 /* Pods_TUHub.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37FD610AAB987235177A1533 /* Pods_TUHubTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +96,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				941AB645B5C3E0E6A95DACF2 /* Pods_TUHubUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F0BE740D8ECDAE2BD2A3D9E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CCFC4770C367EB96D432EF86 /* Pods-TUHub.debug.xcconfig */,
+				806A184B82A477E750A74ED6 /* Pods-TUHub.release.xcconfig */,
+				B6B83BCB5F7B95784508A4F9 /* Pods-TUHubTests.debug.xcconfig */,
+				3361CEFB73AA8E72E9E0B46D /* Pods-TUHubTests.release.xcconfig */,
+				3BBBD4D5AE6A3197E62F3182 /* Pods-TUHubUITests.debug.xcconfig */,
+				6DDB0DADD33842008B60C6C1 /* Pods-TUHubUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7D043A431E5BF7EF0003A853 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +123,8 @@
 				7D043A651E5BF7EF0003A853 /* TUHubTests */,
 				7D043A701E5BF7EF0003A853 /* TUHubUITests */,
 				7D043A4D1E5BF7EF0003A853 /* Products */,
+				2F0BE740D8ECDAE2BD2A3D9E /* Pods */,
+				EF3D9015D8FBE0F6CB30F116 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +141,11 @@
 		7D043A4E1E5BF7EF0003A853 /* TUHub */ = {
 			isa = PBXGroup;
 			children = (
-				7D043A4F1E5BF7EF0003A853 /* AppDelegate.swift */,
-				7D043A511E5BF7EF0003A853 /* FirstViewController.swift */,
-				7D043A531E5BF7EF0003A853 /* SecondViewController.swift */,
-				7D043A551E5BF7EF0003A853 /* Main.storyboard */,
-				7D043A581E5BF7EF0003A853 /* Assets.xcassets */,
-				7D043A5A1E5BF7EF0003A853 /* LaunchScreen.storyboard */,
+				7D043A891E5BF88F0003A853 /* Models */,
+				7D043A8A1E5BF8970003A853 /* View Controllers */,
+				7D043A8B1E5BFC9E0003A853 /* UI */,
 				7D043A5D1E5BF7EF0003A853 /* Info.plist */,
+				7D043A8E1E5F73060003A853 /* JSON+Date.swift */,
 			);
 			path = TUHub;
 			sourceTree = "<group>";
@@ -128,6 +168,48 @@
 			path = TUHubUITests;
 			sourceTree = "<group>";
 		};
+		7D043A891E5BF88F0003A853 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7D043A4F1E5BF7EF0003A853 /* AppDelegate.swift */,
+				7D043A921E5FA9800003A853 /* Credential.swift */,
+				7D043A831E5BF8880003A853 /* NetworkManager.swift */,
+				7D043A801E5BF8880003A853 /* User.swift */,
+				7D043A821E5BF8880003A853 /* Term.swift */,
+				7D043A811E5BF8880003A853 /* Grade.swift */,
+				7D043A901E5F871E0003A853 /* Course.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		7D043A8A1E5BF8970003A853 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7D043A7F1E5BF8880003A853 /* SignInViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		7D043A8B1E5BFC9E0003A853 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7D043A551E5BF7EF0003A853 /* Main.storyboard */,
+				7D043A581E5BF7EF0003A853 /* Assets.xcassets */,
+				7D043A5A1E5BF7EF0003A853 /* LaunchScreen.storyboard */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		EF3D9015D8FBE0F6CB30F116 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9048A865C973948E6821D8E5 /* Pods_TUHub.framework */,
+				C369AC415ABB8738F6351247 /* Pods_TUHubTests.framework */,
+				9BCC307919AD5A4C9159AAE0 /* Pods_TUHubUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +217,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D043A761E5BF7EF0003A853 /* Build configuration list for PBXNativeTarget "TUHub" */;
 			buildPhases = (
+				28039475AA3885DEEDE28843 /* [CP] Check Pods Manifest.lock */,
 				7D043A481E5BF7EF0003A853 /* Sources */,
 				7D043A491E5BF7EF0003A853 /* Frameworks */,
 				7D043A4A1E5BF7EF0003A853 /* Resources */,
+				F4357485321F418D4D4DA10A /* [CP] Embed Pods Frameworks */,
+				1D2E2A6352855419F0CDD0EE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +237,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D043A791E5BF7EF0003A853 /* Build configuration list for PBXNativeTarget "TUHubTests" */;
 			buildPhases = (
+				29680FF66D1C0AC64820050D /* [CP] Check Pods Manifest.lock */,
 				7D043A5E1E5BF7EF0003A853 /* Sources */,
 				7D043A5F1E5BF7EF0003A853 /* Frameworks */,
 				7D043A601E5BF7EF0003A853 /* Resources */,
+				98EAF29C3128009CFF0C01D0 /* [CP] Embed Pods Frameworks */,
+				07FD94B8F6989B78E092EA6F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +258,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D043A7C1E5BF7EF0003A853 /* Build configuration list for PBXNativeTarget "TUHubUITests" */;
 			buildPhases = (
+				604F1201305C11072FDC3DD0 /* [CP] Check Pods Manifest.lock */,
 				7D043A691E5BF7EF0003A853 /* Sources */,
 				7D043A6A1E5BF7EF0003A853 /* Frameworks */,
 				7D043A6B1E5BF7EF0003A853 /* Resources */,
+				EA82EAB17D05D666730D40F2 /* [CP] Embed Pods Frameworks */,
+				BC90BDC0D768AB5C2E597853 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,14 +351,158 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		07FD94B8F6989B78E092EA6F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TUHubTests/Pods-TUHubTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1D2E2A6352855419F0CDD0EE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TUHub/Pods-TUHub-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		28039475AA3885DEEDE28843 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		29680FF66D1C0AC64820050D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		604F1201305C11072FDC3DD0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		98EAF29C3128009CFF0C01D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TUHubTests/Pods-TUHubTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC90BDC0D768AB5C2E597853 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TUHubUITests/Pods-TUHubUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA82EAB17D05D666730D40F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TUHubUITests/Pods-TUHubUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4357485321F418D4D4DA10A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TUHub/Pods-TUHub-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7D043A481E5BF7EF0003A853 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D043A541E5BF7EF0003A853 /* SecondViewController.swift in Sources */,
+				7D043A911E5F871E0003A853 /* Course.swift in Sources */,
+				7D043A931E5FA9800003A853 /* Credential.swift in Sources */,
+				7D043A881E5BF8880003A853 /* NetworkManager.swift in Sources */,
+				7D043A841E5BF8880003A853 /* SignInViewController.swift in Sources */,
+				7D043A861E5BF8880003A853 /* Grade.swift in Sources */,
+				7D043A871E5BF8880003A853 /* Term.swift in Sources */,
+				7D043A8F1E5F73060003A853 /* JSON+Date.swift in Sources */,
 				7D043A501E5BF7EF0003A853 /* AppDelegate.swift in Sources */,
-				7D043A521E5BF7EF0003A853 /* FirstViewController.swift in Sources */,
+				7D043A851E5BF8880003A853 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,12 +652,14 @@
 		};
 		7D043A771E5BF7EF0003A853 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCFC4770C367EB96D432EF86 /* Pods-TUHub.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = LVQAV2S2JC;
 				INFOPLIST_FILE = TUHub/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.temple.TUHub;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.temple.TUhub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -430,12 +667,14 @@
 		};
 		7D043A781E5BF7EF0003A853 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 806A184B82A477E750A74ED6 /* Pods-TUHub.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = LVQAV2S2JC;
 				INFOPLIST_FILE = TUHub/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.temple.TUHub;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.temple.TUhub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -443,6 +682,7 @@
 		};
 		7D043A7A1E5BF7EF0003A853 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6B83BCB5F7B95784508A4F9 /* Pods-TUHubTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -458,6 +698,7 @@
 		};
 		7D043A7B1E5BF7EF0003A853 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3361CEFB73AA8E72E9E0B46D /* Pods-TUHubTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -473,6 +714,7 @@
 		};
 		7D043A7D1E5BF7EF0003A853 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BBBD4D5AE6A3197E62F3182 /* Pods-TUHubUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = LVQAV2S2JC;
@@ -487,6 +729,7 @@
 		};
 		7D043A7E1E5BF7EF0003A853 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DDB0DADD33842008B60C6C1 /* Pods-TUHubUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = LVQAV2S2JC;
@@ -518,6 +761,7 @@
 				7D043A781E5BF7EF0003A853 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7D043A791E5BF7EF0003A853 /* Build configuration list for PBXNativeTarget "TUHubTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +770,7 @@
 				7D043A7B1E5BF7EF0003A853 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7D043A7C1E5BF7EF0003A853 /* Build configuration list for PBXNativeTarget "TUHubUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +779,7 @@
 				7D043A7E1E5BF7EF0003A853 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
