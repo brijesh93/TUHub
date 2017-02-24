@@ -25,6 +25,7 @@ struct Term {
             let endDate = json["endDate"].date,
             let sections = json["sections"].array
             else {
+                log.error("Invalid JSON while initializing Term")
                 return nil
         }
         
@@ -34,7 +35,6 @@ struct Term {
         self.endDate = endDate
         
         for subJSON in sections {
-            
             // Check whether the JSON contains grade or course info
             if subJSON["grades"] != JSON.null {
                 if let grade = Grade(json: subJSON) {

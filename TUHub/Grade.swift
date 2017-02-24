@@ -29,6 +29,7 @@ struct Grade {
             let grade = grades["value"]?.string,
             let updated = grades["updated"]?.dateTime
             else {
+                log.error("Invalid JSON while initializing Grade")
                 return nil
         }
         

@@ -159,19 +159,23 @@ extension User {
 // Courses
 extension User {
     
-    typealias CoursesResponseHandler = ([Course]?, Error?) -> Void
+    typealias CoursesResponseHandler = ([Term]?, Error?) -> Void
     
     func retrieveCourseOverview(_ responseHandler: CoursesResponseHandler?) {
         NetworkManager.request(fromEndpoint: .courseOverview, withTUID: tuID, authenticateWith: credential) { (json, error) in
-            var courses: [Course]?
-
+            var courses: [Term]?
+            
             if let json = json {
                 debugPrint(json)
+                for (_, subJSON) in json["terms"] {
+                    if let term = Term(json: subJSON) {
+                        
+                    }
+                }
+                
             }
-            
         }
     }
-    
     func retrieveCourseFullView(_ responseHandler: CoursesResponseHandler?) {
         NetworkManager.request(fromEndpoint: .courseFullView, withTUID: tuID, authenticateWith: credential) { (json, error) in
             var courses: [Course]?

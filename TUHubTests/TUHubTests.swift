@@ -62,7 +62,7 @@ class TUHubTests: XCTestCase {
     
     func testCourseOverview() {
         let asyncExpectation = expectation(description: "testCourseOverview")
-        var kCourses: [Course]?
+        var kCourses: [Term]?
         var kUser: User?
         
         User.signInSilently { (user, error) in
@@ -77,7 +77,7 @@ class TUHubTests: XCTestCase {
             }
         }
         
-        waitForExpectations(timeout: 10) { (error) in
+        waitForExpectations(timeout: 100) { (error) in
             if let error = error {
                 log.error(error)
             }
@@ -90,7 +90,7 @@ class TUHubTests: XCTestCase {
     
     func testCourseFullView() {
         let asyncExpectation = expectation(description: "testCourseFullView")
-        var kCourses: [Course]?
+        var kCourses: [Term]?
         var kUser: User?
         
         User.signInSilently { (user, error) in
@@ -118,7 +118,7 @@ class TUHubTests: XCTestCase {
     
     func testCourseCalendarView() {
         let asyncExpectation = expectation(description: "testCourseCalendarView")
-        var kCourses: [Course]?
+        var kCourses: [Term]?
         var kUser: User?
         
         User.signInSilently { (user, error) in
