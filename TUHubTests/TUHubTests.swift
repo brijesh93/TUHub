@@ -145,33 +145,34 @@ class TUHubTests: XCTestCase {
 //        
 //    }
     
-    // Removed for now until I can figure out what arguments the API wants for this endpoint
-//    func testCourseRoster() {
-//        let asyncExpectation = expectation(description: "testCourseCalendarView")
-//        var kCourses: [Course]?
-//        var kUser: User?
-//        
-//        User.signInSilently { (user, error) in
-//            if let user = user {
-//                kUser = user
-//                user.retrieveCourseRoster({ (courses, error) in
-//                    if let courses = courses {
-//                        kCourses = courses
-//                    }
-//                    asyncExpectation.fulfill()
-//                })
-//            }
-//        }
-//        
-//        waitForExpectations(timeout: 10) { (error) in
-//            if let error = error {
-//                log.error(error)
-//            }
-//            
-//            XCTAssertNotNil(kUser, "Failed to retrieve user.\nSign in if you have not already done so.")
-//            XCTAssertNotNil(kCourses, "Failed to retrieve course roster for user.")
-//        }
-//        
-//    }
+    func testCourseRoster() {
+        let asyncExpectation = expectation(description: "testCourseCalendarView")
+        var kRoster: [String]?
+        var kUser: User?
+        
+        User.signInSilently { (user, error) in
+            if let user = user {
+                kUser = user
+                user.retrieveCourseOverview({ (terms, error) in
+                    if let course = terms?.first?.courses?.first {
+                        course.retrieveRoster({ (roster, error) in
+                            kRoster = roster
+                            asyncExpectation.fulfill()
+                        })
+                    }
+                })
+            }
+        }
+        
+        waitForExpectations(timeout: 30) { (error) in
+            if let error = error {
+                log.error(error)
+            }
+            
+            XCTAssertNotNil(kUser, "Failed to retrieve user.\nSign in if you have not already done so.")
+            XCTAssertNotNil(kRoster, "Failed to retrieve course roster for user.")
+        }
+        
+    }
     
 }

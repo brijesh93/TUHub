@@ -35,4 +35,5 @@ struct Instructor {
         self.instructorID = instructorID
         self.isPrimary = isPrimary == "true" ? true : false
     }
+
 }

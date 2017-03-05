@@ -31,7 +31,7 @@ class User {
     private(set) var tuID: String
     private(set) var roles: [String]
     
-    fileprivate var credential: Credential
+    fileprivate(set) var credential: Credential
 
     
     internal init?(json: JSON, credential: Credential) {
@@ -145,10 +145,6 @@ extension User {
                 }
             }
             
-            if let error = error {
-                log.error(error)
-            }
-            
             responseHandler?(grades, error)
         }
         
@@ -201,18 +197,6 @@ extension User {
     // CourseCalendarView only provides data about the current week, which we are unlikely to need because we will be providing a full calendar
 //    func retrieveCourseCalendarView(_ responseHandler: CoursesResponseHandler?) {
 //        NetworkManager.request(fromEndpoint: .courseCalendarView, withTUID: tuID, authenticateWith: credential) { (json, error) in
-//            var courses: [Course]?
-//            
-//            if let json = json {
-//                debugPrint(json)
-//            }
-//            
-//        }
-//    }
-    
-    // Removed for now until I can figure out what arguments the API wants for this endpoint
-//    func retrieveCourseRoster(_ responseHandler: CoursesResponseHandler?) {
-//        NetworkManager.shared!.request(fromEndpoint: .courseRoster, withTUID: username, authenticateWith: credential) { (json, error) in
 //            var courses: [Course]?
 //            
 //            if let json = json {

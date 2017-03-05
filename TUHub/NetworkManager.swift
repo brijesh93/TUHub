@@ -12,13 +12,12 @@ import SwiftyJSON
 class NetworkManager: NSObject {
     
     enum UserEndpoint: String {
-        case grades = "https://prd-mobile.temple.edu/banner-mobileserver/api/2.0/grades/"
-        case courseOverview = "https://prd-mobile.temple.edu/banner-mobileserver/api/2.0/courses/overview/"
-        case courseFullView = "https://prd-mobile.temple.edu/banner-mobileserver/api/2.0/courses/fullview/"
+        case grades = "https://prd-mobile.temple.edu/banner-mobileserver/api/2.0/grades"
+        case courseOverview = "https://prd-mobile.temple.edu/banner-mobileserver/api/2.0/courses/overview"
+        case courseFullView = "https://prd-mobile.temple.edu/banner-mobileserver/api/2.0/courses/fullview"
         // case courseCalendarView = "https://prd-mobile.temple.edu/banner-mobileserver/api/2.0/courses/calendarview/"
         // This endpoint only gives this current week's schedule, which we are unlikely to use.
-        // case courseRoster = "https://prd-mobile.temple.edu/banner-mobileserver/api/2.0/courses/roster/"
-        // This endpoint doesn't work? It always gives invalid arguments error. Will investigate further.
+        case courseRoster = "https://prd-mobile.temple.edu/banner-mobileserver/api/2.0/courses/roster"
     }
     
     enum Endpoint: String {
@@ -31,14 +30,29 @@ class NetworkManager: NSObject {
     static func request(fromEndpoint endpoint: Endpoint,
                         _ responseHandler: ResponseHandler?) {
         
-        NetworkManager.request(url: endpoint.rawValue, withTUID: nil, authenticateWith: nil, responseHandler)
+        NetworkManager.request(url: endpoint.rawValue, withTUID: nil, arguments: nil, authenticateWith: nil, responseHandler)
+    }
+    
+    static func request(fromEndpoint endpoint: Endpoint,
+                        arguments: [String],
+                        _ responseHandler: ResponseHandler?) {
+        
+        NetworkManager.request(url: endpoint.rawValue, withTUID: nil, arguments: arguments, authenticateWith: nil, responseHandler)
     }
     
     static func request(fromEndpoint endpoint: Endpoint,
                         authenticateWith credential: Credential,
                         _ responseHandler: ResponseHandler?) {
         
-        NetworkManager.request(url: endpoint.rawValue, withTUID: nil, authenticateWith: credential, responseHandler)
+        NetworkManager.request(url: endpoint.rawValue, withTUID: nil, arguments: nil, authenticateWith: credential, responseHandler)
+    }
+    
+    static func request(fromEndpoint endpoint: Endpoint,
+                        arguments: [String],
+                        authenticateWith credential: Credential,
+                        _ responseHandler: ResponseHandler?) {
+        
+        NetworkManager.request(url: endpoint.rawValue, withTUID: nil, arguments: arguments, authenticateWith: credential, responseHandler)
     }
     
     static func request(fromEndpoint endpoint: UserEndpoint,
@@ -46,11 +60,21 @@ class NetworkManager: NSObject {
                         authenticateWith credential: Credential,
                         _ responseHandler: ResponseHandler?) {
         
-        NetworkManager.request(url: endpoint.rawValue, withTUID: tuID, authenticateWith: nil, responseHandler)
+        NetworkManager.request(url: endpoint.rawValue, withTUID: tuID, arguments: nil, authenticateWith: nil, responseHandler)
+    }
+    
+    static func request(fromEndpoint endpoint: UserEndpoint,
+                        withTUID tuID: String,
+                        arguments: [String],
+                        authenticateWith credential: Credential,
+                        _ responseHandler: ResponseHandler?) {
+        
+        NetworkManager.request(url: endpoint.rawValue, withTUID: tuID, arguments: arguments, authenticateWith: nil, responseHandler)
     }
     
     private static func request(url: String,
                                 withTUID tuID: String?,
+                                arguments: [String]?,
                                 authenticateWith credential: Credential?,
                                 _ responseHandler: ResponseHandler?) {
         
@@ -63,8 +87,30 @@ class NetworkManager: NSObject {
             }
         }
         
+        // Create arguments list
+        var args = ""
+        if let arguments = arguments {
+            for (index, arg) in arguments.enumerated() {
+                
+                // Start arguments list with '?'
+                if index == 0 {
+                    args += "?"
+                }
+                
+                // Add argument
+                args += "\(arg)"
+                
+                // Add separator if not the last argument
+                if index != arguments.count - 1 {
+                    args += "&"
+                }
+                
+            }
+        }
         
-        Alamofire.request(url + (tuID ?? ""), headers: headers)
+        let url = url + (tuID != nil ? "/\(tuID!)" : "") + args
+        
+        Alamofire.request(url, headers: headers)
             .responseJSON { (response) in
                 // Log error if there is one
                 if let error = response.error {

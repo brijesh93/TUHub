@@ -48,7 +48,7 @@ struct Term {
             }
             // For course overview
             else if subJSON["meetingPatterns"] != JSON.null {
-                if let course = Course(json: subJSON) {
+                if let course = Course(json: subJSON, termID: id) {
                     if courses == nil {
                         courses = [Course]()
                     }
@@ -57,7 +57,7 @@ struct Term {
             }
             // For course full view
             else if subJSON["sectionId"] != JSON.null {
-                if let course = Course(json: subJSON) {
+                if let course = Course(json: subJSON, termID: id) {
                     if courses == nil {
                         courses = [Course]()
                     }
