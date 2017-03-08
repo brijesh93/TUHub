@@ -24,6 +24,7 @@
 		7D043A931E5FA9800003A853 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D043A921E5FA9800003A853 /* Credential.swift */; };
 		7D043A971E5FB8080003A853 /* CourseMeeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D043A961E5FB8080003A853 /* CourseMeeting.swift */; };
 		7D043A991E5FBE100003A853 /* Instructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D043A981E5FBE100003A853 /* Instructor.swift */; };
+		7D6D6D7E1E6FD6CB00BF121A /* UIColor+Cherry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6D6D7D1E6FD6CB00BF121A /* UIColor+Cherry.swift */; };
 		941AB645B5C3E0E6A95DACF2 /* Pods_TUHubUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BCC307919AD5A4C9159AAE0 /* Pods_TUHubUITests.framework */; };
 		A1D62E3F439C1C254F6FC729 /* Pods_TUHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9048A865C973948E6821D8E5 /* Pods_TUHub.framework */; };
 /* End PBXBuildFile section */
@@ -71,6 +72,7 @@
 		7D043A921E5FA9800003A853 /* Credential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
 		7D043A961E5FB8080003A853 /* CourseMeeting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseMeeting.swift; sourceTree = "<group>"; };
 		7D043A981E5FBE100003A853 /* Instructor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instructor.swift; sourceTree = "<group>"; };
+		7D6D6D7D1E6FD6CB00BF121A /* UIColor+Cherry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Cherry.swift"; sourceTree = "<group>"; };
 		806A184B82A477E750A74ED6 /* Pods-TUHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TUHub.release.xcconfig"; path = "Pods/Target Support Files/Pods-TUHub/Pods-TUHub.release.xcconfig"; sourceTree = "<group>"; };
 		9048A865C973948E6821D8E5 /* Pods_TUHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TUHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BCC307919AD5A4C9159AAE0 /* Pods_TUHubUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TUHubUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,6 +204,7 @@
 				7D043A551E5BF7EF0003A853 /* Main.storyboard */,
 				7D043A581E5BF7EF0003A853 /* Assets.xcassets */,
 				7D043A5A1E5BF7EF0003A853 /* LaunchScreen.storyboard */,
+				7D6D6D7D1E6FD6CB00BF121A /* UIColor+Cherry.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 				7D043A861E5BF8880003A853 /* Grade.swift in Sources */,
 				7D043A871E5BF8880003A853 /* Term.swift in Sources */,
 				7D043A8F1E5F73060003A853 /* JSON+Date.swift in Sources */,
+				7D6D6D7E1E6FD6CB00BF121A /* UIColor+Cherry.swift in Sources */,
 				7D043A501E5BF7EF0003A853 /* AppDelegate.swift in Sources */,
 				7D043A971E5FB8080003A853 /* CourseMeeting.swift in Sources */,
 				7D043A851E5BF8880003A853 /* User.swift in Sources */,

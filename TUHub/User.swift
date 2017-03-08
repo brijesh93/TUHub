@@ -94,7 +94,7 @@ extension User {
         NetworkManager.request(fromEndpoint: .getUserInfo, authenticateWith: credential) { (json, error) in
             // Attempt to unwrap necessary attributes
             if let json = json, let user = User(json: json, credential: credential) {
-                
+                debugPrint(json)
                 User.current = user
                 
                 log.verbose("User signed in\nUsername: \(user.username)\nTUID: \(user.tuID)\n")

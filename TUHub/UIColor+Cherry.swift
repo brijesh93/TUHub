@@ -6,4 +6,10 @@
 //  Copyright © 2017 Temple University. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension UIColor {
+    static var cherry: UIColor {
+        return UIColor(colorLiteralRed: 158.0/256, green: 27.0/256, blue: 52.0/256, alpha: 1.0)
+    }
+}
